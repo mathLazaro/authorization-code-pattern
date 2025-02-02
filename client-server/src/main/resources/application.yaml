@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: client-server
+  security:
+    oauth2:
+      client:
+        registration:
+          client-server:
+            provider: spring
+            client-id: client-id
+            client-secret: 123
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://localhost:8080/login/oauth2/code/{registrationId}"
+            scope:
+              - openid
+              - profile
+            client-name: client-server
+        provider:
+          spring:
+            issuer-uri: http://localhost:9000
+
