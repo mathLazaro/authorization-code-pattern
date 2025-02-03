@@ -19,7 +19,7 @@ public class ClientController {
     public ClientController(WebClient.Builder webClient) {
 
         this.webClient = webClient
-                .baseUrl("https://localhost:8090")
+                .baseUrl("https://127.0.0.1:8090")
                 .build();
     }
 
